@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | My projectTestInputTest</title>
+    <title>Unity WebGL Player | My project3DProject</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=1170 height=2532 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">My projectTestInputTest</div>
+        <div id="unity-build-title">My project3DProject</div>
       </div>
     </div>
     <script>
@@ -57,14 +57,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/TestForInputForCellIphone.loader.js";
+      var loaderUrl = buildUrl + "/kunshan-metaverse-subway.loader.js";
       var config = {
-        dataUrl: buildUrl + "/TestForInputForCellIphone.data.unityweb",
-        frameworkUrl: buildUrl + "/TestForInputForCellIphone.framework.js.unityweb",
-        codeUrl: buildUrl + "/TestForInputForCellIphone.wasm.unityweb",
+        dataUrl: buildUrl + "/kunshan-metaverse-subway.data.unityweb",
+        frameworkUrl: buildUrl + "/kunshan-metaverse-subway.framework.js.unityweb",
+        codeUrl: buildUrl + "/kunshan-metaverse-subway.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompanyTest",
-        productName: "My projectTestInputTest",
+        companyName: "DefaultCompany",
+        productName: "My project3DProject",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
@@ -94,10 +94,11 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1170px";
+        canvas.style.height = "2532px";
       }
 
+      canvas.style.background = "url('" + buildUrl + "/kunshan-metaverse-subway.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
@@ -108,7 +109,7 @@
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
                 fullscreenButton.onclick = () => {
-                  unityInstance.SetFullscreen(1);
+                  document.makeFullscreen('unity-container');
                 };
               }).catch((message) => {
                 alert(message);
