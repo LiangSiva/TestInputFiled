@@ -272,6 +272,11 @@
         Subwayusername = urlParams.get('param3');
         TrainID=urlParams.get('param4');
         SubWayToken=urlParams.get('param5');
+        displayedProgress=0.1;
+            unityProgress=0;
+            //loadingBar.style.display = "none";
+            loadingBackground.style.display = "none";
+            setTrainLoadFinish();
         window.addEventListener('message', function(event) {
     if (event.data.type === 'ResultBoxPageReturn') {
       var DataSync=event.data.data;
